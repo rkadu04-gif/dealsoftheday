@@ -4,6 +4,7 @@
 <head>
 
 <title>Terms & Conditions | Deals of the Day</title>
+<link rel="icon" type="image/png" href="logo.png">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,7 +17,26 @@ background:#f5f6fa;
 color:#333;
 }
 
-/* HEADER */
+.logo{
+height:55px;
+width:auto;
+display:block;
+}
+
+.logo-container{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+header{
+background:#111;
+color:white;
+padding:10px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}/* HEADER */
 
 header{
 background:#111;
@@ -102,11 +122,19 @@ text-decoration:none;
 
 <header>
 
-<h2>Deals of the Day</h2>
+<div class="logo-container">
+  <img src="logo.png" alt="logo" class="logo">
+  <span class="logo-text">Deals of the Day</span>
+</div>
+
 
 <nav>
 
-<a href="index.html">Home</a> <a href="products.html">Products</a> <a href="about.html">About Us</a> <a href="contact.html">Contact</a>
+<a href="index.html">Home</a> 
+<!--<a href="products.html">Products</a>-->
+<a href="top-deals.html">Top Deals</a>
+ <a href="about.html">About Us</a>
+ <a href="contact.html">Contact</a>
 
 </nav>
 
