@@ -1,124 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Our Wedding Countdown ❤️ | 15 Feb 2027</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Wedding Countdown</title>
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
-}
-
-body{
-background:linear-gradient(135deg,#ffdde1,#ee9ca7);
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-}
-
-.container{
-background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,0.15);
-max-width:500px;
-width:100%;
-}
-
-h1{
-font-size:32px;
-color:#e91e63;
-margin-bottom:10px;
-}
-
-h2{
-font-size:18px;
-color:#444;
-margin-bottom:25px;
-}
-
-.timer{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:12px;
-}
-
-.box{
-background:#ffe6ec;
-padding:15px;
-border-radius:15px;
-}
-
-.box span{
-display:block;
-font-size:28px;
-font-weight:bold;
-color:#e91e63;
-}
-
-.box small{
-color:#555;
-font-size:14px;
-}
-
-.footer{
-margin-top:25px;
-font-size:16px;
-color:#666;
-}
-
-@media(max-width:500px){
-.timer{
-grid-template-columns:repeat(2,1fr);
-}
-}
-</style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:Arial,sans-serif;background:linear-gradient(135deg,#ffdde1,#ee9ca7);color:#fff;text-align:center;min-height:100vh}.wrap{padding:20px}.hero{font-size:42px;font-weight:700;margin-top:20px}.sub{font-size:20px;margin:10px 0 30px}.timer{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;max-width:800px;margin:0 auto 30px}.box{background:rgba(255,255,255,.18);padding:20px;border-radius:20px;backdrop-filter:blur(8px)}.num{font-size:42px;font-weight:700}.label{font-size:14px;letter-spacing:1px}.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;max-width:1100px;margin:20px auto}.gallery img{width:100%;height:420px;object-fit:cover;border-radius:22px;box-shadow:0 10px 30px rgba(0,0,0,.25)}.footer{margin:30px 0 10px;font-size:18px}@media(max-width:700px){.timer{grid-template-columns:repeat(2,1fr)}.hero{font-size:32px}.gallery img{height:320px}}</style>
 </head>
-
 <body>
-
-<div class="container">
-<h1>💍 Our Wedding Countdown</h1>
-<h2>15 February 2027</h2>
-
-<div class="timer">
-<div class="box"><span id="days">0</span><small>Days</small></div>
-<div class="box"><span id="hours">0</span><small>Hours</small></div>
-<div class="box"><span id="minutes">0</span><small>Minutes</small></div>
-<div class="box"><span id="seconds">0</span><small>Seconds</small></div>
+<div class='wrap'>
+<div class='hero'>💍 Our Wedding Countdown 💍</div>
+<div class='sub'>We are getting married on <b>15 February 2027</b></div>
+<div class='timer'>
+<div class='box'><div id='days' class='num'>0</div><div class='label'>DAYS</div></div>
+<div class='box'><div id='hours' class='num'>0</div><div class='label'>HOURS</div></div>
+<div class='box'><div id='mins' class='num'>0</div><div class='label'>MINUTES</div></div>
+<div class='box'><div id='secs' class='num'>0</div><div class='label'>SECONDS</div></div>
 </div>
-
-<div class="footer">
-❤️ Together Forever ❤️
+<div class='gallery'>
+<img src='/mnt/data/file_00000000e0787208b906b650c37da611' alt='Couple Photo 1'>
+<img src='/mnt/data/file_00000000c0387208aa419a270cefa6fd' alt='Couple Photo 2'>
+<img src='/mnt/data/file_0000000085c47208bbc3fb06166066cd' alt='Couple Photo 3'>
 </div>
+<div class='footer'>❤️ Counting every moment until forever begins ❤️</div>
 </div>
-
 <script>
-const weddingDate = new Date("Feb 15, 2027 00:00:00").getTime();
-
-setInterval(function(){
-const now = new Date().getTime();
-const gap = weddingDate - now;
-
-const days = Math.floor(gap / (1000*60*60*24));
-const hours = Math.floor((gap % (1000*60*60*24)) / (1000*60*60));
-const minutes = Math.floor((gap % (1000*60*60)) / (1000*60));
-const seconds = Math.floor((gap % (1000*60)) / 1000);
-
-document.getElementById("days").innerText = days;
-document.getElementById("hours").innerText = hours;
-document.getElementById("minutes").innerText = minutes;
-document.getElementById("seconds").innerText = seconds;
-
-},1000);
+const target = new Date('February 15, 2027 00:00:00').getTime();
+setInterval(()=>{const now=new Date().getTime();const diff=target-now;if(diff<0)return;document.getElementById('days').innerText=Math.floor(diff/(1000*60*60*24));document.getElementById('hours').innerText=Math.floor((diff%(1000*60*60*24))/(1000*60*60));document.getElementById('mins').innerText=Math.floor((diff%(1000*60*60))/(1000*60));document.getElementById('secs').innerText=Math.floor((diff%(1000*60))/1000);},1000);
 </script>
-
 </body>
 </html>
