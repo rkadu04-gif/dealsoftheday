@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Our Wedding Countdown ❤️ | 15 Feb 2027</title>
+<title>Rohit ❤️ Nikita Wedding Countdown | 15 Feb 2027</title>
 
 <style>
 *{
@@ -38,6 +38,13 @@ color:#e91e63;
 margin-bottom:10px;
 }
 
+.names{
+font-size:28px;
+font-weight:bold;
+color:#d81b60;
+margin-bottom:10px;
+}
+
 h2{
 font-size:18px;
 color:#444;
@@ -63,62 +70,3 @@ font-weight:bold;
 color:#e91e63;
 }
 
-.box small{
-color:#555;
-font-size:14px;
-}
-
-.footer{
-margin-top:25px;
-font-size:16px;
-color:#666;
-}
-
-@media(max-width:500px){
-.timer{
-grid-template-columns:repeat(2,1fr);
-}
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-<h1>💍 Our Wedding Countdown</h1>
-<h2>15 February 2027</h2>
-
-<div class="timer">
-<div class="box"><span id="days">0</span><small>Days</small></div>
-<div class="box"><span id="hours">0</span><small>Hours</small></div>
-<div class="box"><span id="minutes">0</span><small>Minutes</small></div>
-<div class="box"><span id="seconds">0</span><small>Seconds</small></div>
-</div>
-
-<div class="footer">
-❤️ Together Forever ❤️
-</div>
-</div>
-
-<script>
-const weddingDate = new Date("Feb 15, 2027 00:00:00").getTime();
-
-setInterval(function(){
-const now = new Date().getTime();
-const gap = weddingDate - now;
-
-const days = Math.floor(gap / (1000*60*60*24));
-const hours = Math.floor((gap % (1000*60*60*24)) / (1000*60*60));
-const minutes = Math.floor((gap % (1000*60*60)) / (1000*60));
-const seconds = Math.floor((gap % (1000*60)) / 1000);
-
-document.getElementById("days").innerText = days;
-document.getElementById("hours").innerText = hours;
-document.getElementById("minutes").innerText = minutes;
-document.getElementById("seconds").innerText = seconds;
-
-},1000);
-</script>
-
-</body>
-</html>
